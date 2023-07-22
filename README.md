@@ -31,3 +31,38 @@ Django Rest Framework, Redis/RabbitMQ(?), db(?PostgreSQL), Telegram API, OAuth2,
  - CRUD entities on the admin panel (Admin)
 
 ## Non-functional requirements
+
+## Entities
+ - ### EventRepeatOption [e.g. every weekday, etc.]
+    - 
+    - name
+    - time [secs]
+ - ### Appointment
+    - scheduled_at
+    - 
+ - ### Member
+    - user_id [NOT NULL]
+ - ### Manager
+    - user_id [NOT NULL]
+ - ### Lobby
+    - name [NOT NULL]
+    - description
+    - capacity [NOT NULL]
+    - manager [NOT NULL]
+ - ### AttendRequest
+    - member [NOT NULL]
+    - appointment [NOT NULL]
+    - is_pending [NOT NULL]
+    - note [ string]
+ - ### User
+    - telegram_tag [NOT NULL]
+    - first_name [NOT NULL]
+    - second_name [NOT NULL]
+    - last_name [NOT NULL]
+ - ### JoinRequest
+    - member [NOT NULL]
+    - lobby [NOT NULL]
+    - note [ string]
+ - ### Blacklist
+    - member [NOT NULL]
+    - manager [NOT NULL]
